@@ -1,0 +1,91 @@
+//area of triangle
+
+#include<stdio.h>
+#include<math.h>
+
+void qwerty(float x,float y,float z)
+{
+    float a,s;
+    s=(x+y+z)/2;
+    a=sqrt((s*(s-x)*(s-y)*(s-z)));
+    printf("Area of triangle = %f \n",a);
+}
+void main()
+{
+    float a,b,c;
+    printf("Enter the sides of triangles: ");
+    scanf("%f %f %f",&a,&b,&c);
+    qwerty(a,b,c);
+}
+
+
+//average of three number
+
+#include<stdio.h>
+#include<math.h>
+void avg(int a,int b,int c)
+{
+    int av;
+    av=(a+b+c)/3;
+    printf("the avg=%d",av);
+}
+void main()
+{
+    int a,b,c;
+    printf("Enter three number");
+    scanf("%d%d%d",&a,&b,&c);
+    avg(a,b,c);
+}
+
+
+//smallest of three numbers
+
+#include<stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("enter the number");
+    scanf("%d%d%d",&a,&b,&c);
+    if(a<b&&a<c)
+    {
+        printf("the smallest of three number is=%d",a);
+    }
+    else if(b<c)
+    {
+        printf("the smallest of three number is=%d",b);
+    }
+    else
+    {
+        printf("the smallest of three number is=%d",c);
+    }
+}
+
+
+//roots of quadratic equation
+#include<stdio.h>
+#include<math.h>
+
+void main()
+{
+    int a,b,c,d,x,y;
+    printf("enter the coefficient of x^2, x and constant respectively");
+    scanf("%d%d%d",&a,&b,&c);
+    d=b*b-4*a*c;
+    x=(-b+sqrt(d))/2*a;
+    y=(-b-sqrt(d))/2*a;
+    if (d==0)
+    {
+        printf("the roots of the equation are real and equal and the value of roots are=%d",x);
+    }
+    else if(d>0)
+    {
+        printf("the roots of the equation are real and distinct and the value of roots are=%d & %d",x,y);
+    }
+    else if(d<0)
+    {
+       int r,i;
+       r=-b/2*a;
+       i=d/2*a;
+       printf("the roots of the equation are iamginary and the value of roots real part is=%d and the value of roots imaginary part is= %d",r,i);
+    }
+}
