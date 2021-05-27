@@ -1,0 +1,90 @@
+//vowels
+
+#include <stdio.h>
+void main(){
+    char x;
+    printf("enter\n");
+    scanf("%c",&x);
+    switch(x){
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+        printf("%c is a vowel",x);
+        break;
+        default:
+        printf("%c is a consonant",x);
+        break;
+    }   
+}
+
+//time
+
+#include <stdio.h>
+void time(int h, int m){
+    int a;
+    a=h*60+m;
+    printf("the time in min = %d",a);
+}
+void main(){
+    int h,m;
+    printf("enter the time (first hours than minutes)\n");
+    scanf("%d%d",&h,&m);
+    time(h,m);
+}
+
+//months
+
+#include<stdio.h>
+void main(){
+    int a;
+    printf("enter\n");
+    scanf("%d",&a);
+    switch (a){
+        case 1:
+        printf("january"); 
+        break;
+        case 2:
+        printf("february"); 
+        break;
+        case 3:
+        printf("march");
+        break;
+        case 4:
+        printf("april");
+        break;
+        case 5:
+        printf("may");
+        break;
+        case 6:
+        printf("june");
+        break;
+        case 7:
+        printf("july"); 
+        break;
+        case 8:
+        printf("august");
+        break;
+        case 9:
+        printf("september");
+        break;
+        case 10:
+        printf("october");
+        break;
+        case 11:
+        printf("november");
+        break;
+        case 12:
+        printf("december");
+        break;
+        default:
+        printf("invalid input");
+        break;
+    }
+}
