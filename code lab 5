@@ -1,0 +1,75 @@
+//average
+#include<stdio.h>
+int avg(int n){
+    int a[n];
+     for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    int s=0;
+    for(int i=0;i<n;i++){
+        s=s+a[i];
+        printf("%d\n",s);
+    }
+    s=s/n;
+    
+    return s;
+}
+void main(){
+    int n,i;
+    scanf("%d",&n);  
+    printf("avg=%d",avg(n));
+}
+
+//interchange 
+#include<stdio.h>
+void inter(int n){
+    int i,max=-19999999,min=1999999,x,y,t;
+    int a[n];
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++){
+        if(a[i]<min){
+            min=a[i];
+            x=i;
+        }
+        if(a[i]>max){
+            max=a[i];
+            y=i;
+        }
+    }
+    t=a[x];
+    a[x]=a[y];
+    a[y]=t;
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+}
+int main(){
+    int n;
+    scanf("%d",&n);
+    inter(n);
+return 0;
+}
+
+//sum of odd
+#include<stdio.h>
+int sum(int n){
+    int i;
+    for(i=0;i<n;i++){
+        if((i%2)!=0){
+            s=s+i*i;
+        }
+    }
+    return s;
+}
+int main(){
+    int s=0;
+    int n,i,s=0;
+    scanf("%d",&n);
+    
+    s=sum(n);
+    printf("sum=%d",s);
+    return 0;
+
+}
